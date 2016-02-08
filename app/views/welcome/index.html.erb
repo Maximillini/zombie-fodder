@@ -1,0 +1,29 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Zombie Fodder</h1>
+    <p>Zombie fodder is an unofficial companion app for the Fantasy Flight tabletop RPG, <strong>The End of the World</strong>&#8482;</p>
+
+    <p>Register and log in to access your current games, and see all current public games.
+
+    Create your own game sessions with current party members, story hooks, NPCs, randomly generated or customized zombie enemies, bookmark details for picking up where the game is left off.</p>
+
+    <p>Single-origin coffee slow-carb bespoke, lumbersexual fashion axe normcore vegan meh blog vinyl synth roof party squid etsy. Kale chips blue bottle pabst flannel mixtape. Fixie taxidermy synth, quinoa stumptown fashion axe brunch VHS hammock freegan lo-fi +1 offal irony. Sartorial single-origin coffee polaroid echo park asymmetrical meditation, jean shorts dreamcatcher butcher roof party affogato. Meggings small batch tacos, helvetica meditation lo-fi meh man braid shabby chic. YOLO offal before they sold out, normcore synth you probably haven't heard of them locavore migas whatever. Letterpress deep v wolf meditation crucifix.</p>
+  </div>
+</div>
+
+<% @games.each do |game| %>
+<div class="panel panel-default container">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= game.name %></h3>
+  </div>
+  <div class="panel-body game-wrapper">
+      Game Master: <%= game.game_master.username %><br>
+      <%= game.description %><br><br>
+      <%= game.city %>, <%= game.state %><br><br>
+  </div>
+</div>
+<% end %>
+
+<footer>
+  
+</footer>
