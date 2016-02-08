@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background: #141414;
+  color: #FCFCFC;
+}
+
+nav {
+  background: #660000;
+}
+
+.jumbotron {
+  background-image: url('background.jpg');
+}
+
+.panel-heading {
+  background: #1a0000;
+}
+
+.game-wrapper {
+  background: #660000;
+  padding: 1em;
+  margin-bottom: .5em;
+  box-shadow: 2px 2px 0px #330000; 
+}
+
+.game-wrapper a:hover {
+  font-weight: bold;
+}
+
+.game-wrapper a {
+  color: #FCFCFC;
+}
+

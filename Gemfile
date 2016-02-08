@@ -17,11 +17,13 @@ group :development, :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
+  gem 'simplecov', :require => false
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'faker', '1.6.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

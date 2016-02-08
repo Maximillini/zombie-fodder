@@ -11,18 +11,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160203191155) do
+ActiveRecord::Schema.define(version: 20160207235948) do
+
+  create_table "game_masters", force: :cascade do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "games", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "city"
+    t.string   "state"
+    t.integer  "game_master_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "hooks", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "parties", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "dexterity"
+    t.integer  "vitality"
+    t.integer  "logic"
+    t.integer  "willpower"
+    t.integer  "charisma"
+    t.integer  "empathy"
+    t.integer  "phys_stress"
+    t.integer  "ment_stress"
+    t.integer  "soc_stress"
+    t.string   "pos_features"
+    t.string   "neg_features"
+    t.string   "equipment"
+    t.integer  "party_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

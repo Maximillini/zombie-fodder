@@ -11,7 +11,12 @@ class CreatePlayers < ActiveRecord::Migration
       t.integer :phys_stress
       t.integer :ment_stress
       t.integer :soc_stress
+      t.string :pos_features
+      t.string :neg_features
+      t.string :equipment
+      t.references :party
       
+      t.timestamps null: false
     end
   end
 end
