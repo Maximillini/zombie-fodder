@@ -7,4 +7,9 @@ class GameMastersController < ApplicationController
 
   def show
   end
+
+  private
+    def game_masters_params
+      
+    end
 end

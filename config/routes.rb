@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   get "/" => "welcome#index"
   resources :games do
-    resources :parties , only: [:update] do
-      resources :players, only: [:create, :update, :destroy]
+    resources :parties , only: [:new, :create, :update] do
+      resources :players, only: [:new, :create, :update, :destroy]
     end
   end
 
-  resources :game_masters, only: [:create, :new, :show]
+  resources :game_masters, except: [:index, :destroy]
 
   root "welcome#index"
 
