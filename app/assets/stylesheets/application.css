@@ -24,6 +24,12 @@ nav {
 
 .jumbotron {
   background-image: url('background.jpg');
+  font-family: "Rock Salt", cursive;
+  color: #F9F8F7;
+}
+
+.subtitle {
+  font-family: "Rock Salt", cursive;
 }
 
 .panel-heading {
@@ -32,9 +38,9 @@ nav {
 
 .game-wrapper {
   background: #660000;
-  padding: 1em;
-  margin-bottom: .5em;
-  box-shadow: 2px 2px 0px #330000; 
+/*  padding: 1em;
+  margin-bottom: .5em;*/
+/*  box-shadow: 2px 2px 0px #330000; */
 }
 
 .game-wrapper a:hover {
