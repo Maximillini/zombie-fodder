@@ -24,7 +24,7 @@
     <h3 class="panel-title"><%= game.name %></h3>
   </div>
   <div class="panel-body game-wrapper">
-      Game Master: <%= game.game_master.username %><br>
+      Game Master: <%= link_to "#{game.game_master.username}", game_master_path(game.game_master.id) %><br>
       <%= game.description %><br><br>
       <%= game.city %>, <%= game.state %><br><br>
   </div>
