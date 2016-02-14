@@ -44,10 +44,21 @@ nav {
 }
 
 .game-wrapper a:hover {
-  font-weight: bold;
+  background: #660000;
 }
 
 .game-wrapper a {
   color: #FCFCFC;
+}
+
+input[type="submit"] {
+  background: #660000;
+  border: none;
+  box-shadow: 2px 2px 0px #330000;
+  padding: 0.5em;
+}
+
+.rock-font {
+  font-family: "Rock-Salt", cursive;
 }
 

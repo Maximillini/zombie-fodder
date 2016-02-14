@@ -12,9 +12,14 @@
     <nav class="navbar navbar-inverse">
       <div class="navbar-header">
         <ul class="nav navbar-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/login">Log in</a></li>
-          <li><a href="/game_masters/new">Register</a></li>
+            <li><a href="/">Home</a></li>
+          <% if current_user %>
+            <li><a href="/login">Log in</a></li>
+            <li><a href="/game_masters/new">Register</a></li>
+          <% else %>
+            <li><a href="/login"><%= @user.username %></a></li>
+            <li><a href="/game_masters/new">Register</a></li>
+          <% end %>
         </ul>
       </div>
     </nav>
