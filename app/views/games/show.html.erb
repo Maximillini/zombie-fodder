@@ -1,4 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <h1 class="rock-font"><%= @game.name %></h1>
+  <p>Started on <%= @game.created_at.strftime("%B %d, %Y") %></p>
+  <p id="notice"><%= notice %></p>
+  <h3 class="underline">Players:</h3>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>data</td>
+      </tr>
+    </tbody>
+  </table>
 
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>
+  <%= link_to 'Edit', edit_game_path(@game) %> |
+  <%= link_to 'Back', root_path %>
+</div>

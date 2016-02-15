@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 body {
   background: #141414;
   color: #FCFCFC;
@@ -58,7 +59,23 @@ input[type="submit"] {
   padding: 0.5em;
 }
 
+input[type="text"], input[type="password"] {
+  color: #141414;
+}
+
 .rock-font {
-  font-family: "Rock-Salt", cursive;
+  font-family: "Rock Salt", cursive;
+}
+
+#error_explanation {
+  background: #141414;
+}
+
+#error_explanation ul {
+  padding-top: 0.5em;
+}
+
+.underline {
+  text-decoration: underline;
 }
 

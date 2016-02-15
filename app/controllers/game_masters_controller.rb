@@ -5,6 +5,14 @@ class GameMastersController < ApplicationController
 
   def create
     @game_master = GameMaster.create(game_master_params)
+
+    if @game_master.save
+      session[:game_master_id] = @game_master.id
+      redirect_to game_master_path(@game_master)
+    else
+      flash[:danger] = "Registration failed!"
+      render "new"
+    end
   end
 
   def show
@@ -12,7 +20,7 @@ class GameMastersController < ApplicationController
   end
 
   private
-    def game_masters_params
-      
+    def game_master_params
+      params.require(:game_master).permit(:username, :email, :password)
     end
 end
