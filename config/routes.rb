@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   get "/" => "welcome#index"
+  
   resources :games, except: [:index] do
-    resources :parties , only: [:new, :create, :update] do
-      resources :players, only: [:new, :create, :update, :destroy]
-    end
+    resources :players, only: [:new, :create, :update, :destroy]
   end
 
   resources :game_masters, except: [:index, :destroy]
@@ -14,6 +13,8 @@ Rails.application.routes.draw do
 
   get "login" => "sessions#new"
   post "login" => "sessions#create"
+
+  get "logout" => "sessions#destroy"
 
 #################################
 

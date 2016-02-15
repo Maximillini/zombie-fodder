@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20160207235948) do
   create_table "game_masters", force: :cascade do |t|
     t.string   "username"
     t.string   "email"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "games", force: :cascade do |t|
@@ -40,30 +40,23 @@ ActiveRecord::Schema.define(version: 20160207235948) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "parties", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "game_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "players", force: :cascade do |t|
     t.string   "name"
-    t.integer  "dexterity"
-    t.integer  "vitality"
-    t.integer  "logic"
-    t.integer  "willpower"
-    t.integer  "charisma"
-    t.integer  "empathy"
-    t.integer  "phys_stress"
-    t.integer  "ment_stress"
-    t.integer  "soc_stress"
+    t.integer  "dexterity",    default: 1
+    t.integer  "vitality",     default: 1
+    t.integer  "logic",        default: 1
+    t.integer  "willpower",    default: 1
+    t.integer  "charisma",     default: 1
+    t.integer  "empathy",      default: 1
+    t.integer  "phys_stress",  default: 0
+    t.integer  "ment_stress",  default: 0
+    t.integer  "soc_stress",   default: 0
     t.string   "pos_features"
     t.string   "neg_features"
     t.string   "equipment"
-    t.integer  "party_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "game_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end

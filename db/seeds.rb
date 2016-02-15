@@ -5,9 +5,9 @@ require "faker"
 end
 
 5.times do
-    Game.create(name: Faker::Book.title, description: Faker::Hipster.sentence, city: Faker::Address.city, state: Faker::Address.state, game_master: GameMaster.find((rand(4) + 1)))
+  Game.create(name: Faker::Book.title, description: Faker::Hipster.sentence, city: Faker::Address.city, state: Faker::Address.state, game_master: GameMaster.find((rand(4) + 1)))
 end
 
-5.times do
-  Party.create()
+10.times do
+  Player.create(name: Faker::Name.name, equipment: Faker::Commerce.product_name, pos_features: Faker::Hipster.paragraph, neg_features: Faker::Hipster.paragraph, game: Game.find((rand(4) + 1)))
 end
