@@ -5,6 +5,7 @@ class GameMaster < ActiveRecord::Base
 
   validates :username, :email, :password, presence: true
   validates :username, :email, uniqueness: true
+  validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/, message: "Must be valid email address" }
 
   has_secure_password
 end   
