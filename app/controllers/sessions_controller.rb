@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     @game_master = GameMaster.find_by(email: params[:session][:email].downcase)
-    if @game_master && @game_master.authenticate(params[:session][:password])
+    if @game_master && @game_master.authenticate(password: params[:session][:password])
       session[:game_master_id] = @game_master.id
       redirect_to @game_master
     else
@@ -15,6 +15,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:game_master_id] = nil
-    redirect_to "root"
+    redirect_to root_path
   end
 end

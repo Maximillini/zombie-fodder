@@ -21,7 +21,7 @@
 <% @games.each do |game| %>
 <div class="panel panel-inverted container">
   <div class="panel-heading">
-    <h3 class="panel-title"><%= link_to "#{game.name}", game_path(game.id) %></h3>
+    <h3 class="panel-title"><%= link_to "#{game.name}", game_path(game) %></h3>
   </div>
   <div class="panel-body game-wrapper">
       Game Master: <%= link_to "#{game.game_master.username}", game_master_path(game.game_master.id) %><br>
