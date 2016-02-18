@@ -14,7 +14,7 @@
         <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
           <% if logged_in? %>
-            <li><%= link_to "#{current_user.username}", game_masters_path(current_user) %></li>
+            <li><%= link_to "#{current_gm.username}", current_gm %></li>
             <li><a href="/logout">Log out</a></li>
           <% else %>
             <li><a href="/login">Log in</a></li>

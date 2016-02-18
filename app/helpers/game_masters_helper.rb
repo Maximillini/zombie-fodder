@@ -1,6 +1,6 @@
 module GameMastersHelper
-  def current_user
-    @user = GameMaster.find_by(id: session[:game_master_id])
+  def current_gm
+    @game_master = GameMaster.find_by(id: session[:game_master_id])
   end
 
   def logged_in?

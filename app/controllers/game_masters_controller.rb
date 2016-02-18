@@ -16,7 +16,7 @@ class GameMastersController < ApplicationController
   end
 
   def show
-    @game_master = GameMaster.find_by(id: params[:game_master_id])
+    @game_master = GameMaster.find_by(id: params[:id])
   end
 
   private

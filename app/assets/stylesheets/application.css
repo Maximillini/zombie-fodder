@@ -17,6 +17,7 @@
 body {
   background: #141414;
   color: #FCFCFC;
+  background: linear-gradient(#141414, #001a33)
 }
 
 nav {
@@ -29,13 +30,7 @@ nav {
   color: #F9F8F7;
 }
 
-.jumbotron p:before {
-  display: block;
-  height: 50%;
-  width: 50%;
-  background: white;
-  position: absolute;
-  opacity: 50%;
+.jumbotron p {
 }
 
 .subtitle {
