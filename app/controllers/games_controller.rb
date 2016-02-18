@@ -10,7 +10,6 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
-    @game = Game.find_by(id: params[:id])
   end
 
   # GET /games/new
@@ -70,6 +69,6 @@ class GamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_params
-      params[:game]
+      params.require(:game).permit(:name, :description, :city, :state, :bookmark)
     end
 end
