@@ -24,25 +24,21 @@ RSpec.describe GamesController, type: :controller do
   # Game. As you add validations to Game, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    { 
+      name: "New Game", 
+      description: "This is a valid game.", 
+      city: "Chicago", 
+      state: "Illinois", 
+      bookmark: "" }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
   }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # GamesController. Be sure to keep this updated too.
   let(:valid_session) { {} }
-
-  describe "GET #index" do
-    it "assigns all games as @games" do
-      game = Game.create! valid_attributes
-      get :index, {}, valid_session
-      expect(assigns(:games)).to eq([game])
-    end
-  end
 
   describe "GET #show" do
     it "assigns the requested game as @game" do
@@ -103,7 +99,13 @@ RSpec.describe GamesController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+          name: "Different Name",
+          description: "This is an updated description",
+          city: "Geneva",
+          state: "Illinois",
+          bookmark: "New Bookmark"
+        }
       }
 
       it "updates the requested game" do

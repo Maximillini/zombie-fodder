@@ -5,15 +5,18 @@
   <h3 class="underline">Players:</h3>
   <% if @game.players.any? %>
     <% @game.players.each do |player| %>
-      <div class="player-card">
+      <div class="player-card col-sm-3">
         <div class="player-name">
-          player.name
+          <%= player.name %><br>
         </div><br>
-
+        <%= player.dexterity %> / <%= player.vitality %> | <%= player.logic %> / <%= player.willpower %> | <%= player.charisma %> / <%= player.empathy %><br>
+          + Features: <%= player.pos_features %><br>
+          - Features: <%= player.neg_features %><br>
+          Equipment: <%= player.equipment %>
       </div>
     <% end %>
   <% else %>
-    <p>No current players. You should create some.</p>
+    <p>No current players, you should create some.</p>
   <% end %>
 
   <%= link_to 'Edit', edit_game_path(@game) %> |
