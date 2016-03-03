@@ -1,20 +1,26 @@
 <div class="container">
   <h1 class="rock-font"><%= @game_master.username %>'s Games:</h1><br>
-  <% @game_master.games.each do |game| %>
-    <div class="panel panel-inverted container">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= link_to "#{game.name}", game_path(game.id) %></h3>
+  <% if @game_master.games.empty? %>
+    <h3>Not currently running any games.</h3>
+  <% else %>
+    <% @game_master.games.each do |game| %>
+      <div class="panel panel-inverted container">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= link_to "#{game.name}", game_path(game.id) %></h3>
+        </div>
+
+        <div class="panel-body game-wrapper">
+            Current Players: 
+            <% if !game.players %>
+              0<br>
+            <% else %>
+              <%= game.players.length %><br>
+            <% end %>
+            <%= game.description %><br><br>
+            <%= game.city %>, <%= game.state %><br><br>
+        </div>
       </div>
-      <div class="panel-body game-wrapper">
-          Current Players: 
-          <% if game.players %>
-            0<br>
-          <% else %>
-            <%= game.players.length %>
-          <% end %>
-          <%= game.description %><br><br>
-          <%= game.city %>, <%= game.state %><br><br>
-      </div>
-    </div>
+    <% end %>
   <% end %>
+  <%= button_to "Start new game", new_game_path, {method: "get"} %>
 </div>
