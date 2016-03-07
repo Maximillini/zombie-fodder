@@ -6,11 +6,12 @@
         <h3 class="panel-title"><%= link_to "#{game.name}", game_path(game.id) %></h3>
       </div>
       <div class="panel-body game-wrapper">
+          Play time: <%= time_ago_in_words(game.created_at) %><br>
           Current Players: 
-          <% if game.players %>
+          <% if game.players.empty? %>
             0<br>
           <% else %>
-            <%= game.players.length %>
+            <%= game.players.length %><br>
           <% end %>
           <%= game.description %><br><br>
           <%= game.city %>, <%= game.state %><br><br>
