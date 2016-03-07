@@ -15,9 +15,8 @@
  */
 
 body {
-  background: #141414;
+  background: #081725;
   color: #FCFCFC;
-/*  background: linear-gradient(#141414, #001a33)*/
 }
 
 nav {
@@ -30,7 +29,9 @@ nav {
   color: #F9F8F7;
 }
 
-.jumbotron p {
+.opaque {
+  background: rgba(50, 50, 50, 0.45);
+  padding: 1em;
 }
 
 .subtitle {
