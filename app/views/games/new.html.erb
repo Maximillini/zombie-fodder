@@ -1,7 +1,16 @@
 <div class="container">
   <h1>New Game</h1>
 
-  <%= render 'form' %>
+  <section class="form">
+    <%= render 'form' %>
 
-  <%= link_to 'Back', games_path %>
+    <%= link_to 'Back', games_path %>
+  </section>
+
+  <section class="instructions">
+    This is the first step in creating a new game. Here you can fill out the basic details of the game, give it a title, list your location to share ideas with other local GMs and integrate with Google Maps, and give a short description of your scenario. 
+
+    <p>This will all be displayed on your main game page, which is also where you will add your <span class="bold">PCs</span>, <span class="bold">Hooks</span>, <span class="bold">Bookmarks</span>, <span class="bold">NPCs</span>, and <span class="bold">Zombies</span>.</p>
+  </section>
+
 </div>

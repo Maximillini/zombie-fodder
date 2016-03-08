@@ -14,13 +14,15 @@
  *= require_self
  */
 
+@import "_variables";
+
 body {
   background: #081725;
   color: #FCFCFC;
 }
 
-nav {
-  background: #660000;
+.bold {
+  font-weight: bold;
 }
 
 .jumbotron {
@@ -43,14 +45,15 @@ nav {
 }
 
 .game-wrapper {
-  background: #660000;
+  background: $red;
+  margin: 0;
 /*  padding: 1em;
   margin-bottom: .5em;*/
 /*  box-shadow: 2px 2px 0px #330000; */
 }
 
 .game-wrapper a:hover {
-  background: #660000;
+  background: $red;
 }
 
 .game-wrapper a {
@@ -58,7 +61,7 @@ nav {
 }
 
 input[type="submit"] {
-  background: #660000;
+  background: $red;
   border: none;
   box-shadow: 2px 2px 0px #330000;
   padding: 0.5em;
@@ -69,7 +72,7 @@ input[type="submit"]:hover {
 }
 
 input[type="submit"]:active {
-  background: #660000;
+  background: $red;
   border: none;
   padding: 0.5em;
 }
@@ -79,7 +82,7 @@ input[type="text"], input[type="password"] {
 }
 
 .rock-font {
-  font-family: "Rock Salt", cursive;
+  font-family: $rock-font
 }
 
 #error_explanation {
@@ -94,12 +97,4 @@ input[type="text"], input[type="password"] {
   text-decoration: underline;
 }
 
-.player-card {
-  background: #660000;
-  box-shadow: 2px 2px 0px #330000;
-  padding: 0.5em;
-  margin-right: 1em;
-  margin-bottom: 1em;
-  width: 30%;
-}
 
