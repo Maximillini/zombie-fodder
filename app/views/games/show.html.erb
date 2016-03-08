@@ -18,7 +18,9 @@
   <% else %>
     <p>No current players, you should create some.</p>
   <% end %>
-
-  <%= link_to 'Edit', edit_game_path(@game) %> |
+  <% if game_creator? %>
+    <%= link_to "Create Player", new_game_player_path(@game) %>
+    <%= link_to 'Edit', edit_game_path(@game) %> |
+  <% end %>
   <%= link_to 'Back', root_path %>
 </div>

@@ -21,11 +21,11 @@
 </div>
 
 <% @games.each do |game| %>
-<div class="panel panel-inverted container">
-  <div class="panel-heading">
-    <h3 class="panel-title"><%= link_to "#{game.name}", game_path(game) %></h3>
+<div class="game-card container">
+  <div class="card-heading">
+    <h3 class="card-title"><%= link_to "#{game.name}", game_path(game) %></h3>
   </div>
-  <div class="panel-body game-wrapper">
+  <div class="game-wrapper">
       Game Master: <%= link_to "#{game.game_master.username}", game_master_path(game.game_master.id) %><br>
       <%= game.description %><br><br>
       <%= game.city %>, <%= game.state %><br><br>

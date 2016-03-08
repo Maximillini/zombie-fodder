@@ -1,3 +1,43 @@
 // Place all the styles related to the games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "_variables";
+
+.card-heading {
+  background: #1a0000;
+  margin: 0;
+}
+
+.form {
+  float: left;
+  margin-right: auto;
+  margin-left: auto;
+  width: 35%;
+    & a {
+      color: #fff;
+    }
+}
+
+.instructions {
+  float: right;
+  margin: auto;
+  width: 65%;
+  font-size: 2em;
+  line-height: 1em;
+  background: rgba(50, 50, 50, 0.25);
+  padding: 1em;
+}
+
+.textarea {
+  color: $charcoal;
+}
+
+.player-card {
+  background: #660000;
+  box-shadow: 2px 2px 0px #330000;
+  padding: 0.5em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  width: 30%;
+}
