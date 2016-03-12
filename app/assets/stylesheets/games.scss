@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "_variables";
+@import "_mixins";
 
 .card-heading {
   background: #1a0000;
@@ -10,23 +11,37 @@
 }
 
 .form {
+  // @include debug;
   float: left;
   margin-right: auto;
   margin-left: auto;
   width: 35%;
-    & a {
+    a {
       color: #fff;
+      &:visited {
+        color: #fff;
+      }
     }
 }
 
 .instructions {
+  // @include debug;
   float: right;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 65%;
   font-size: 2em;
   line-height: 1em;
-  background: rgba(50, 50, 50, 0.25);
-  padding: 1em;
+  // background: rgba(50, 50, 50, 0.25);
+  padding: 0 1em 1em 1em;
+  h1 {
+    border-bottom: 2px solid white;
+    padding-bottom: .5em;
+  }
+  p {
+    font-size: 1em;
+    line-height: 1em;
+  }
 }
 
 .textarea {
@@ -40,4 +55,37 @@
   margin-right: 1em;
   margin-bottom: 1em;
   width: 30%;
+}
+
+.player-name {
+  border-bottom: 2px solid white;
+  padding-bottom: .5em;
+}
+
+.stats {
+  border-bottom: 2px solid white;
+  padding-bottom: 1em;
+  margin-top: 1em; 
+}
+
+.phys, .ment, .soc {
+  background: green;
+  border: 1px solid white;
+  margin: .5em;
+  padding: .25em;
+}
+
+.features {
+  margin-top: .5em;
+}
+
+.game-wrapper {
+  margin-top: 0;
+}
+
+.card-title > a {
+  color: white;
+  &:visited {
+    color: white;
+  }
 }

@@ -1,4 +1,7 @@
 class PlayersController < ApplicationController
+
+  before_action :set_game
+
   def new
     @player = Player.new
   end
@@ -9,6 +12,7 @@ class PlayersController < ApplicationController
 
 
   def update
+    @player = Player.find_by(id: params[:player_id])
   end
 
   def destroy
@@ -17,6 +21,10 @@ class PlayersController < ApplicationController
   private
 
   def player_params
-    params.require(:player).permit(:)
+    params.require(:player).permit(:name, :dexterity, :vitality, :logic, :willpower, :charisma, :empathy, :pos_features, :neg_features, :equipment)
+  end
+
+  def set_game
+    @game = Game.find(params[:game_id])
   end
 end
