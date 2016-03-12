@@ -1,0 +1,54 @@
+<%= form_for([@game, @player]) do |f| %>
+  <% if @player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% @player.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :dexterity %>
+    <%= f.text_field :dexterity %>
+  </div>
+  <div class="field">
+    <%= f.label :vitality %>
+    <%= f.text_field :vitality %>
+  </div>
+  <div class="field">
+    <%= f.label :logic %>
+    <%= f.text_field :logic %>
+  </div>
+  <div class="field">
+    <%= f.label :willpower %>
+    <%= f.text_field :willpower %>
+  </div>
+  <div class="field">
+    <%= f.label :charisma %>
+    <%= f.text_field :charisma %>
+  </div>
+  <div class="field">
+    <%= f.label :empathy %>
+    <%= f.text_field :empathy %>
+  </div>
+  <div class="field">
+    <%= f.label :pos_features %>
+    <%= f.text_field :pos_features %>
+  </div>
+  <div class="field">
+    <%= f.label :neg_features %>
+    <%= f.text_field :neg_features %>
+  </div>
+  <div class="field">
+    <%= f.label :equipment %>
+    <%= f.text_area :equipment %>
+  </div>
+<% end %>

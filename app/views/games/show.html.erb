@@ -1,18 +1,34 @@
 <div class="container">
+  <p id="notice"><%= notice %></p>
   <h1 class="rock-font"><%= @game.name %></h1>
   <p>Started on <%= @game.created_at.strftime("%B %d, %Y") %></p>
-  <p id="notice"><%= notice %></p>
+  <p><%= @game.description %></p>
   <h3 class="underline">Players:</h3>
   <% if @game.players.any? %>
     <% @game.players.each do |player| %>
       <div class="player-card col-sm-3">
+
         <div class="player-name">
-          <%= player.name %><br>
-        </div><br>
-        <%= player.dexterity %> / <%= player.vitality %> | <%= player.logic %> / <%= player.willpower %> | <%= player.charisma %> / <%= player.empathy %><br>
+          <%= player.name %>
+        </div>
+
+        <div class="stats">
+          <span class="phys">
+            Dex <%= player.dexterity %> / <%= player.vitality %> Vit
+          </span>
+          <span class="ment">
+            Log <%= player.logic %> / <%= player.willpower %> WPow
+          </span>
+          <span class="soc">
+            Char <%= player.charisma %> / <%= player.empathy %> Emp
+          </span>
+        </div>
+
+        <div class="features">
           + Features: <%= player.pos_features %><br>
           - Features: <%= player.neg_features %><br>
           Equipment: <%= player.equipment %>
+        </div>
       </div>
     <% end %>
   <% else %>
