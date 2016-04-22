@@ -11,3 +11,7 @@ end
 10.times do
   Player.create(name: Faker::Name.name, equipment: Faker::Commerce.product_name, pos_features: Faker::Hipster.paragraph, neg_features: Faker::Hipster.paragraph, game: Game.find((rand(4) + 1)))
 end
+
+10.times do
+  Hook.create(description: Faker::Hipster.paragraph, game: Game.find((rand(4) + 1)))
+end
