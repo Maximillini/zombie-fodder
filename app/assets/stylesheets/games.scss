@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "_variables";
-@import "_mixins";
+@import "variables";
+@import "mixins";
 
 .card-heading {
   background: #1a0000;
@@ -13,8 +13,8 @@
 .form {
   // @include debug;
   float: left;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   width: 35%;
     a {
       color: #fff;
@@ -27,13 +27,12 @@
 .instructions {
   // @include debug;
   float: right;
-  margin-left: auto;
-  margin-right: auto;
-  width: 65%;
   font-size: 2em;
   line-height: 1em;
-  // background: rgba(50, 50, 50, 0.25);
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 1em 1em 1em;
+  width: 65%;
   h1 {
     border-bottom: 2px solid white;
     padding-bottom: .5em;
@@ -51,9 +50,9 @@
 .player-card {
   background: #660000;
   box-shadow: 2px 2px 0px #330000;
-  padding: 0.5em;
-  margin-right: 1em;
   margin-bottom: 1em;
+  margin-right: 1em;
+  padding: 0.5em;
   width: 30%;
 }
 
@@ -64,8 +63,8 @@
 
 .stats {
   border-bottom: 2px solid white;
-  padding-bottom: 1em;
   margin-top: 1em; 
+  padding-bottom: 1em;
 }
 
 .phys, .ment, .soc {
@@ -88,4 +87,12 @@
   &:visited {
     color: white;
   }
+}
+
+.hook {
+  border-bottom: 2px solid #FCFCFC;
+  border-top: 2px solid #FCFCFC;
+  font-size: 2em;
+  line-height: 30px;
+  padding: 20px 10px;
 }

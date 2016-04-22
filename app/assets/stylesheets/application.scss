@@ -14,11 +14,14 @@
  *= require_self
  */
 
-@import "_variables";
-@import "_mixins";
+@import "variables";
+@import "mixins";
+@import "game_cards";
+@import "games";
+@import "parties";
 
 body {
-  background: #081725;
+  background: $blue-bg;
   color: #FCFCFC;
 }
 
